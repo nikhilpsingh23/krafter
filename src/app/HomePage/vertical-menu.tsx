@@ -132,7 +132,7 @@ const VerticalMenu = () => {
             {/* Main Content */}
             <div className="w-full">
                 {sections.map((section) => (
-                    // Remove the background image section and replace with a colored background
+                   
                     <div 
                         key={section.id}
                         ref={(el: HTMLDivElement | null) => {

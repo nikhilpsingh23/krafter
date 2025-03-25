@@ -1,5 +1,5 @@
 
-import HeroSection from "./HomePage/hero";
+
 import FeatureCards from "./HomePage/card";
 import VerticalMenu from "./HomePage/vertical-menu";
 import DharmaERP from "./HomePage/dharma-erp";
