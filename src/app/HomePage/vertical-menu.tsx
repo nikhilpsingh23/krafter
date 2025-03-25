@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
+// Remove the unused Image import
+// import Image from 'next/image';
 
 const VerticalMenu = () => {
     const [activeSection, setActiveSection] = useState(1);

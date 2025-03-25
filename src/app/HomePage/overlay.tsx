@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion";
+import Image from 'next/image';
+// Fix the image import
+const bgImage = "/images/move-bg.jpg";
 
 const Overlay = () => {
     return (
         <div className="relative mt-30 w-full h-screen overflow-hidden">
-            {/* Background Image */}
             <motion.div 
                 className="absolute inset-0"
                 initial={{ y: "0%" }}
@@ -18,14 +20,15 @@ const Overlay = () => {
                     ease: "linear"
                 }}
             >
-                <img 
-                    src="/images/move-bg.jpg" 
-                    alt="Background" 
-                    className="w-full h-[170%] object-cover"
+                <Image
+                    src={bgImage}
+                    alt="overlay image"
+                    fill
+                    className="w-full h-full object-cover"
+                    priority={true}
                 />
             </motion.div>
-
-            {/* Static Overlay */}
+            {/* Rest of the component remains the same */}
             <div className="absolute inset-0 bg-black/30" />
 
             {/* Content */}
