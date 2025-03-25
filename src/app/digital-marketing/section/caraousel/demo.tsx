@@ -26,11 +26,7 @@ const StickyCarousel = () => {
         return () => clearInterval(timer);
     }, [images.length]);
 
-    const getAdjacentIndexes = () => {
-        const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-        const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-        return { prevIndex, nextIndex };
-    };
+   
 
     const getMultipleAdjacentIndexes = () => {
         const prevIndex2 = (currentIndex - 2 + images.length) % images.length;

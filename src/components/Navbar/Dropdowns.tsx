@@ -123,9 +123,8 @@ export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
   );
 };
 
-import {  Phone, Apple, Layers, AppWindow, 
-  Building, ShoppingCart, HeartHandshake, LayoutGrid, FileSpreadsheet, 
-  Users, DollarSign, Wallet, Brain, Database, Code, BarChart, 
+import {  
+   Brain, Database, BarChart, 
   MessageSquare, Cloud, LineChart, Search, PieChart, Bot, ChartBar, Lightbulb, 
   AreaChart, Calculator } from 'lucide-react';
 

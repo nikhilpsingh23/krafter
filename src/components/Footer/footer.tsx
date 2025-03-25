@@ -5,7 +5,7 @@ import {
     Mail,
     Package,
     ScrollText,
-    SunMoon,
+    
   } from 'lucide-react';
   
   import { Dock, DockIcon, DockItem, DockLabel } from './dock';

@@ -1,5 +1,4 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Image from "next/image";
+
 import HeroSection from "./HomePage/hero";
 import FeatureCards from "./HomePage/card";
 import VerticalMenu from "./HomePage/vertical-menu";
