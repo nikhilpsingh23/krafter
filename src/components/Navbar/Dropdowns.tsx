@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Smartphone, Globe, Building2, Boxes } from 'lucide-react';
+import { Smartphone, Globe, Building2 } from 'lucide-react';
 
 interface DropdownProps {
   isVisible?: boolean;
