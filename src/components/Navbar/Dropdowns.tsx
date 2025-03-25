@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Smartphone, Globe, Building2 } from 'lucide-react';
 
 interface DropdownProps {
   isVisible?: boolean;
@@ -16,15 +15,18 @@ export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
   return (
     <div className={dropdownClasses}>
       <div className="space-y-4">
+        {/* Mobile Application section */}
         <div className="flex items-center gap-2 mb-3">
-          <Smartphone className="w-5 h-5 text-blue-600" />
+          
           <h3 className="font-semibold text-gray-800 text-[18px]">Mobile Application</h3>
         </div>
         <ul className="space-y-3 pl-7">
           <li>
-            <Link href="/services/android" className="hover:text-blue-600 transition-colors duration-200">
-              <span className="text-[16px]">Android Apps</span>
-              <p className="text-[14px] text-gray-500">Native Android Development</p>
+            <Link href="/services/android" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+              <div>
+                <span className="text-[16px]">Android Apps</span>
+                <p className="text-[14px] text-gray-500">Native Android Development</p>
+              </div>
             </Link>
           </li>
           <li>
@@ -49,15 +51,18 @@ export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
       </div>
 
       <div className="space-y-4">
+        {/* Website section */}
         <div className="flex items-center gap-2 mb-3">
-          <Globe className="w-5 h-5 text-blue-600" />
-          <h3 className="font-semibold text-gray-800">Website</h3>
+          
+          <h3 className="font-semibold text-gray-800 text-[18px]">Website </h3>
         </div>
         <ul className="space-y-3 pl-7">
           <li>
-            <Link href="/services/corporate" className="hover:text-blue-600 transition-colors duration-200">
-              Corporate Website
-              <p className="text-sm text-gray-500">Professional Business Sites</p>
+            <Link href="/services/corporate" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+              <div>
+                <span className="text-[16px]">Corporate Website</span>
+                <p className="text-[14px] text-gray-500">Professional Business Sites</p>
+              </div>
             </Link>
           </li>
           <li>
@@ -82,15 +87,18 @@ export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
       </div>
 
       <div className="space-y-4">
+        {/* ERP section */}
         <div className="flex items-center gap-2 mb-3">
-          <Building2 className="w-5 h-5 text-blue-600" />
-          <h3 className="font-semibold text-gray-800">ERP</h3>
+          
+          <h3 className="font-semibold text-gray-800 text-[18px]">Dharma ERP</h3>
         </div>
         <ul className="space-y-3 pl-7">
           <li>
-            <Link href="/services/erp/dharma" className="hover:text-blue-600 transition-colors duration-200">
-              Dharma ERP
-              <p className="text-sm text-gray-500">Enterprise Resource Planning</p>
+            <Link href="/services/erp/dharma" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+              <div>
+                <span className="text-[16px]">Dharma ERP</span>
+                <p className="text-[14px] text-gray-500">Enterprise Resource Planning</p>
+              </div>
             </Link>
           </li>
           <li>
