@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from 'next/image';
-// Fix the image import
-const bgImage = "/images/move-bg.jpg";
 
 const Overlay = () => {
     return (
@@ -21,11 +19,11 @@ const Overlay = () => {
                 }}
             >
                 <Image
-                    src={bgImage}
-                    alt="overlay image"
+                    src="/images/move-bg.jpg"
+                    alt="Moving background"
                     fill
-                    className="w-full h-full object-cover"
-                    priority={true}
+                    className="object-cover"
+                    priority
                 />
             </motion.div>
             {/* Rest of the component remains the same */}
