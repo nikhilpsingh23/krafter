@@ -9,6 +9,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Fix content type definition
 export const StickyScroll = ({
   content,
   contentClassName,
@@ -16,12 +17,13 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
-    content?: React.ReactNode | any;
+    content?: React.ReactNode;
   }[];
   contentClassName?: string;
 }) => {
+  // Fix ref type
+  const ref = useRef<HTMLDivElement>(null);
   const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     container: ref,
     offset: ["start start", "end start"],
@@ -59,9 +61,10 @@ export const StickyScroll = ({
     linearGradients[0]
   );
 
+  // Fix useEffect dependency
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  }, [activeCard, linearGradients]);
 
   return (
     <motion.div
