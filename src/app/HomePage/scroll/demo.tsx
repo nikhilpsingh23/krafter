@@ -4,49 +4,157 @@ import { StickyScroll } from "./sticky";
 import Image from "next/image";
 
 const content = [
+  
+  // Products Section (First 5 items)
   {
-    title: "Collaborative Editing",
-    description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    title: "Enterprise Solutions",
+    description: "Complete business management platform for modern enterprises",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
+      <div className="h-full w-full">
         <Image
-          src="/images/home/cover2.jpeg"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
+          src="/images/home/bg1.png"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Enterprise Solutions"
         />
       </div>
     ),
   },
   {
-    title: "Version control",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud solutions for growing businesses",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+      <div className="h-full w-full">
+        <Image
+          src="/images/home/bg2.png"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Cloud Infrastructure"
+        />
       </div>
     ),
   },
   {
-    title: "Running out of content",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    title: "AI Integration",
+    description: "Advanced AI solutions for process automation",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+      <div className="h-full w-full">
+        <Image
+          src="/images/products/ai.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="AI Integration"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Security Suite",
+    description: "Comprehensive security solutions for your business",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/products/security.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Security Suite"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Analytics Platform",
+    description: "Data-driven insights for informed decisions",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/products/analytics.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Analytics Platform"
+        />
+      </div>
+    ),
+  },
+
+  // Services Section (Next 5 items)
+  {
+    title: "IT Consulting",
+    description: "Expert guidance for digital transformation",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/services/consulting.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="IT Consulting"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "System Integration",
+    description: "Seamless integration of business systems",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/services/integration.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="System Integration"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Digital Marketing",
+    description: "Strategic online presence management",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/services/marketing.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Digital Marketing"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Training Programs",
+    description: "Comprehensive technical training solutions",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/services/training.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Training Programs"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Support Services",
+    description: "24/7 technical support and maintenance",
+    content: (
+      <div className="h-full w-full">
+        <Image
+          src="/images/services/support.jpg"
+          width={400}
+          height={400}
+          className="h-full w-full object-cover rounded-lg"
+          alt="Support Services"
+        />
       </div>
     ),
   },
@@ -59,3 +167,4 @@ export function StickyScrollRevealDemo() {
     </div>
   );
 }
+

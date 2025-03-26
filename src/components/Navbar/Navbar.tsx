@@ -20,7 +20,7 @@ const Navbar = () => {
           {/* Logo - Now on the left for all views */}
           <div className="flex items-center">
             <Link href="/">
-              <Image src="/logo1.png" alt="Logo" width={150} height={50} />
+              <Image src="/images/logo3.png" alt="Logo" width={160} height={55} />
             </Link>
           </div>
 

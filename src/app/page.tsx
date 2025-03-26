@@ -8,6 +8,8 @@ import Overlay from "./HomePage/overlay";
 import { HeroParallaxDemo } from "./HomePage/heroParllax/demo";
 import { StickyScrollRevealDemo } from "./HomePage/scroll/demo";
 import MobileCarousel from "./HomePage/mobileCaraousel";
+import { SplineSceneBasic } from "./HomePage/Automation/demo";
+
 
 
 
@@ -18,8 +20,10 @@ export default function Home() {
     <>
       <div className="space-y-24">
         <HeroParallaxDemo/>
-        <DharmaERP/>
+        <SplineSceneBasic/>
         <StickyScrollRevealDemo/>
+        <DharmaERP/>
+        
         {/* <HeroSection/> */}
         <MobileCarousel/>
         <FeatureCards/>

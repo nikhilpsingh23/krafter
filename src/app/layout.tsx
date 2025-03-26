@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} font-raleway antialiased`}>
+        <div className="fixed top-0 left-0 right-0 z-[997]">
         <Navbar />
+        </div>
         <main className="pb-48 md:pb-40">
           {children}
         </main>
