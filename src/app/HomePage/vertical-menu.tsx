@@ -50,12 +50,12 @@ const VerticalMenu = () => {
     const sections = [
         {
             id: 1,
-            title: "Dharma ERP.",
+            title: "Product",
             description: "Dedicated software engineering teams that include technical rising stars customer expectations and accelerate your growth.",
             bgImage: "/images/home/vr1.png",
             cards: [
                 {
-                    title: "Sales",
+                    title: "Dharma-ERP",
                     description: "Enhancing Performance Through Digital Transformation"
                 },
                 {
@@ -74,7 +74,7 @@ const VerticalMenu = () => {
         },
         {
             id: 2,
-            title: "Services.",
+            title: "Services",
             description: "Streamline your software engineering to drive greater efficiency and create resilience across your products and platforms.",
             bgImage: "/images/home/vr4.png",
             cards: [
@@ -175,8 +175,10 @@ const VerticalMenu = () => {
                                             className="bg-white p-6 sm:p-8 border border-white/20 
                                             hover:bg-gray-50 shadow-md hover:shadow-2xl 
                                             transition-all duration-300 relative 
+                                            rounded-[10]
                                             after:absolute after:bottom-0 after:left-0 
-                                            after:right-0 after:h-[4px] after:bg-[#825ea8]"
+                                            after:right-0 after:h-[4px] after:bg-[#825ea8]
+                                            after:rounded-b-xl"
                                         >
                                             <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                                 {card.title}
