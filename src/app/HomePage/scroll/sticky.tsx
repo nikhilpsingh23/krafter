@@ -73,11 +73,11 @@ export const StickyScroll = ({
   const servicesContent = content.slice(Math.ceil(content.length / 2));
   
   // Update the handleMenuClick function
-  const handleMenuClick = (section: string, index: number) => {
+  const handleMenuClick = (section: string) => {
     setActiveSection(section);
-    setActiveCard(0); // Reset active card when switching sections
+    setActiveCard(0);
     if (ref.current) {
-      ref.current.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top when switching
+      ref.current.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
   
@@ -116,7 +116,7 @@ export const StickyScroll = ({
         ? 'text-white' 
         : 'text-white/50 hover:text-white/70'
     }`}
-    onClick={() => handleMenuClick('products', 0)}
+    onClick={() => handleMenuClick('products')}
   >
     {activeSection === 'products' && (
       <motion.div
@@ -135,7 +135,7 @@ export const StickyScroll = ({
         ? 'text-white' 
         : 'text-white/50 hover:text-white/70'
     }`}
-    onClick={() => handleMenuClick('services', content.length / 2)}
+    onClick={() => handleMenuClick('services')}
   >
     {activeSection === 'services' && (
       <motion.div
