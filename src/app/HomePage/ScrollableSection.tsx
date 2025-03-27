@@ -36,7 +36,6 @@ const sections: SectionData[] = [
 
 export default function ScrollableSection() {
   const [activeSection, setActiveSection] = useState('products');
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);

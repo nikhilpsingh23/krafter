@@ -3,7 +3,6 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import WhatsAppButton from "@/components/Whatsapp/page";
-import { AppleStyleDock } from "@/components/Footer/footer";
 
 const raleway = Raleway({
   subsets: ["latin"],
