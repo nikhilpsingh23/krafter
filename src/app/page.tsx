@@ -9,6 +9,7 @@ import { HeroParallaxDemo } from "./HomePage/heroParllax/demo";
 import { StickyScrollRevealDemo } from "./HomePage/scroll/demo";
 import MobileCarousel from "./HomePage/mobileCaraousel";
 import { SplineSceneBasic } from "./HomePage/Automation/demo";
+import TrustedBy from "./HomePage/trusted";
 
 
 
@@ -22,13 +23,14 @@ export default function Home() {
         <HeroParallaxDemo/>
         <SplineSceneBasic/>
         <StickyScrollRevealDemo/>
-        <DharmaERP/>
+        <TrustedBy/>
+       {/* <DharmaERP/>
         
-        {/* <HeroSection/> */}
+         <HeroSection/> 
         <MobileCarousel/>
         <FeatureCards/>
         <VerticalMenu/>
-        <ImageSection/>
+        <ImageSection/> */}
         <Overlay/>
       </div>
     </>

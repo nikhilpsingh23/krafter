@@ -32,9 +32,9 @@ export default function RootLayout({
         <div className="fixed bottom-42 md:bottom-38 right-8 z-[999]">
           <WhatsAppButton />
         </div>
-        <div className="fixed bottom-0 left-0 right-0 z-[998]">
+       {/* <div className="fixed bottom-0 left-0 right-0 z-[998]">
           <AppleStyleDock />
-        </div>
+        </div> */}
       </body>
     </html>
   );

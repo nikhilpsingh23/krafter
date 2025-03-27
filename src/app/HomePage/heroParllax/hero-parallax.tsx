@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[340vh] py-10 md:py-15 lg:py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
+      className="h-[200vh] md:h-[300vh] py-4 md:py-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
     >
       <Header />
       <motion.div
@@ -68,13 +68,13 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
+        className="px-2 md:px-4"
       >
-        <motion.div className="flex flex-col">
-          <div className="mb-3 px-4">
-            <h2 className="text-3xl font-bold text-black">Cloud Services</h2>
+        <motion.div className="flex flex-col gap-10 md:gap-20">
+          <div className="mb-3 px-2 md:px-4">
+            <h2 className="text-2xl md:text-3xl font-bold">Cloud Services</h2>
           </div>
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-20 overflow-visible">
             {firstRow.map((product) => (
               <ProductCard
                 product={product}
@@ -84,10 +84,10 @@ export const HeroParallax = ({
             ))}
           </motion.div>
           
-          <div className="mb-3 px-4">
-            <h2 className="text-3xl font-bold text-black">SAAS Services</h2>
+          <div className="mb-3 px-2 md:px-4">
+            <h2 className="text-2xl md:text-3xl font-bold">SAAS Services</h2>
           </div>
-          <motion.div className="flex flex-row mb-20 space-x-20">
+          <motion.div className="flex flex-row space-x-10 md:space-x-20 mb-10 md:mb-20 overflow-visible">
             {secondRow.map((product) => (
               <ProductCard
                 product={product}
@@ -97,10 +97,10 @@ export const HeroParallax = ({
             ))}
           </motion.div>
           
-          <div className="mb-3 px-4">
-            <h2 className="text-3xl font-bold text-black">MSME</h2>
+          <div className="mb-3 px-2 md:px-4">
+            <h2 className="text-2xl md:text-3xl font-bold">MSME</h2>
           </div>
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 overflow-visible">
             {thirdRow.map((product) => (
               <ProductCard
                 product={product}

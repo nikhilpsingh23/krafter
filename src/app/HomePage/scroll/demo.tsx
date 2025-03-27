@@ -4,157 +4,96 @@ import { StickyScroll } from "./sticky";
 import Image from "next/image";
 
 const content = [
-  
-  // Products Section (First 5 items)
+  // Products Section
   {
-    title: "Enterprise Solutions",
-    description: "Complete business management platform for modern enterprises",
+    title: "Dharma ERP",
+    description: "Empowering businesses, simplifying processes.",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/home/bg1.png"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Enterprise Solutions"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/dharma.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Enterprise Solutions" />
       </div>
     ),
   },
   {
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud solutions for growing businesses",
+    title: "User Admin",
+    description: "Scalable and secure cloud infrastructure solutions",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/home/bg2.png"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Cloud Infrastructure"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/useradmin.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Cloud Platform" />
       </div>
     ),
   },
   {
-    title: "AI Integration",
-    description: "Advanced AI solutions for process automation",
+    title: "AI Solutions",
+    description: "Advanced artificial intelligence and machine learning tools",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/products/ai.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="AI Integration"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/dashboard.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="AI Solutions" />
       </div>
     ),
   },
   {
     title: "Security Suite",
-    description: "Comprehensive security solutions for your business",
+    description: "Comprehensive cybersecurity and protection systems",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/products/security.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Security Suite"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/products/security.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Security Suite" />
       </div>
     ),
   },
   {
     title: "Analytics Platform",
-    description: "Data-driven insights for informed decisions",
+    description: "Data analytics and business intelligence solutions",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/products/analytics.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Analytics Platform"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/dashboard.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Analytics Platform" />
       </div>
     ),
   },
 
-  // Services Section (Next 5 items)
+  // Services Section
   {
-    title: "IT Consulting",
-    description: "Expert guidance for digital transformation",
+    title: "Data Science",
+    description: "Transforming data into decisions.",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/services/consulting.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="IT Consulting"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "System Integration",
-    description: "Seamless integration of business systems",
-    content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/services/integration.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="System Integration"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/data.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Consulting Services" />
       </div>
     ),
   },
   {
     title: "Digital Marketing",
-    description: "Strategic online presence management",
+    description: "Boost visibility, drive success.",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/services/marketing.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Digital Marketing"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/social.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Implementation" />
       </div>
     ),
   },
   {
-    title: "Training Programs",
-    description: "Comprehensive technical training solutions",
+    title: "App Development",
+    description: "Innovate on the go.",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/services/training.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Training Programs"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/app.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Training Programs" />
       </div>
     ),
   },
   {
-    title: "Support Services",
-    description: "24/7 technical support and maintenance",
+    title: "Website Development",
+    description: "Crafting digital excellence.",
     content: (
-      <div className="h-full w-full">
-        <Image
-          src="/images/services/support.jpg"
-          width={400}
-          height={400}
-          className="h-full w-full object-cover rounded-lg"
-          alt="Support Services"
-        />
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/website.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Support & Maintenance" />
+      </div>
+    ),
+  },
+  {
+    title: "Custom Development",
+    description: "Tailored software development solutions",
+    content: (
+      <div className="h-full w-full flex items-center justify-center">
+        <Image src="/images/home/website.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Custom Development" />
       </div>
     ),
   },
@@ -162,9 +101,14 @@ const content = [
 
 export function StickyScrollRevealDemo() {
   return (
-    <div className="p-10">
-      <StickyScroll content={content} />
-    </div>
+    <>
+      <div className="flex items-center justify-center py-4">
+        <h2 className="text-4xl font-bold text-center">What We Offer</h2>
+      </div>
+      <div className="p-10">
+        <StickyScroll content={content} />
+      </div>
+    </>
   );
 }
 

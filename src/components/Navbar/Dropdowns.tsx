@@ -1,4 +1,13 @@
 import Link from 'next/link';
+import { 
+  Smartphone, Apple, Layers, Globe, 
+  Building2, ShoppingCart, Wrench, Layout, 
+  Database, Users, File, BarChart3, Wallet ,LineChart, 
+  MessageSquare, Cloud, PieChart, Search,
+  Briefcase, ChartBar, LayoutDashboard, Calculator,Brain
+} from 'lucide-react';
+
+
 
 interface DropdownProps {
   isVisible?: boolean;
@@ -7,277 +16,240 @@ interface DropdownProps {
 
 export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
   const dropdownClasses = isMobile
-    ? 'px-4 py-4 space-y-6'
-    : 'absolute top-full left-0 w-[600px] bg-white shadow-lg rounded-lg p-6 grid grid-cols-3 gap-8 z-50';
+    ? 'px-4 py-4 space-y-6 max-h-[70vh] overflow-y-auto'
+    : 'absolute top-full left-1/2 w-[800px] bg-white shadow-lg rounded-lg p-6 grid grid-cols-3 gap-8 z-50 transform -translate-x-1/2';
 
   if (!isVisible && !isMobile) return null;
 
   return (
     <div className={dropdownClasses}>
-      <div className="space-y-4">
-        {/* Mobile Application section */}
-        <div className="flex items-center gap-2 mb-3">
-          
-          <h3 className="font-semibold text-gray-800 text-[18px]">Mobile Application</h3>
+      {/* Mobile Application Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">Mobile Application</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/services/android" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Smartphone className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Android Apps</span>
+              <p className="text-[14px] text-gray-500">Native Android Development</p>
+            </div>
+          </Link>
+          <Link href="/services/ios" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Apple className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">IOS Apps</span>
+              <p className="text-[14px] text-gray-500">Native iOS Development</p>
+            </div>
+          </Link>
+          <Link href="/services/hybrid" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Layers className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Hybrid Apps</span>
+              <p className="text-[14px] text-gray-500">Cross-platform Solutions</p>
+            </div>
+          </Link>
+          <Link href="/services/progressive" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Globe className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Progressive Apps</span>
+              <p className="text-[14px] text-gray-500">Modern Web Applications</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/services/android" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <div>
-                <span className="text-[16px]">Android Apps</span>
-                <p className="text-[14px] text-gray-500">Native Android Development</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/ios" className="hover:text-blue-600 transition-colors duration-200">
-              IOS Apps
-              <p className="text-sm text-gray-500">Native iOS Development</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/hybrid" className="hover:text-blue-600 transition-colors duration-200">
-              Hybrid Apps
-              <p className="text-sm text-gray-500">Cross-platform Solutions</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/progressive" className="hover:text-blue-600 transition-colors duration-200">
-              Progressive Apps
-              <p className="text-sm text-gray-500">Modern Web Applications</p>
-            </Link>
-          </li>
-        </ul>
       </div>
 
-      <div className="space-y-4">
-        {/* Website section */}
-        <div className="flex items-center gap-2 mb-3">
-          
-          <h3 className="font-semibold text-gray-800 text-[18px]">Website </h3>
+      {/* Website Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">Website</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/services/corporate" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Building2 className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Corporate Website</span>
+              <p className="text-[14px] text-gray-500">Professional Business Sites</p>
+            </div>
+          </Link>
+          <Link href="/services/ecommerce" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <ShoppingCart className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">E-commerce Website</span>
+              <p className="text-[14px] text-gray-500">Online Store Solutions</p>
+            </div>
+          </Link>
+          <Link href="/services/service" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Wrench className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Service Website</span>
+              <p className="text-[14px] text-gray-500">Service-based Platforms</p>
+            </div>
+          </Link>
+          <Link href="/services/portal" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Layout className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Portal Development</span>
+              <p className="text-[14px] text-gray-500">Custom Web Portals</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/services/corporate" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <div>
-                <span className="text-[16px]">Corporate Website</span>
-                <p className="text-[14px] text-gray-500">Professional Business Sites</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/ecommerce" className="hover:text-blue-600 transition-colors duration-200">
-              E-commerce Website
-              <p className="text-sm text-gray-500">Online Store Solutions</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/service" className="hover:text-blue-600 transition-colors duration-200">
-              Service Website
-              <p className="text-sm text-gray-500">Service-based Platforms</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/portal" className="hover:text-blue-600 transition-colors duration-200">
-              Portal Development
-              <p className="text-sm text-gray-500">Custom Web Portals</p>
-            </Link>
-          </li>
-        </ul>
       </div>
 
-      <div className="space-y-4">
-        {/* ERP section */}
-        <div className="flex items-center gap-2 mb-3">
-          
-          <h3 className="font-semibold text-gray-800 text-[18px]">Dharma ERP</h3>
+      {/* ERP Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">ERP</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/services/erp/dharma" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Database className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Dharma ERP</span>
+              <p className="text-[14px] text-gray-500">Enterprise Resource Planning</p>
+            </div>
+          </Link>
+          <Link href="/services/erp/crm" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Users className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">CRM</span>
+              <p className="text-[14px] text-gray-500">Customer Relationship Management</p>
+            </div>
+          </Link>
+          <Link href="/services/erp/subcontracting" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <File className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Sub Contracting</span>
+              <p className="text-[14px] text-gray-500">Contract Management Solutions</p>
+            </div>
+          </Link>
+          <Link href="/services/erp/sales" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <BarChart3 className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Sales</span>
+              <p className="text-[14px] text-gray-500">Sales Management System</p>
+            </div>
+          </Link>
+          <Link href="/services/erp/finance" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Wallet className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Finance</span>
+              <p className="text-[14px] text-gray-500">Financial Management Tools</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/services/erp/dharma" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <div>
-                <span className="text-[16px]">Dharma ERP</span>
-                <p className="text-[14px] text-gray-500">Enterprise Resource Planning</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/erp/crm" className="hover:text-blue-600 transition-colors duration-200">
-              CRM
-              <p className="text-sm text-gray-500">Customer Relationship Management</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/erp/subcontracting" className="hover:text-blue-600 transition-colors duration-200">
-              Sub Contracting
-              <p className="text-sm text-gray-500">Contract Management Solutions</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/erp/sales" className="hover:text-blue-600 transition-colors duration-200">
-              Sales
-              <p className="text-sm text-gray-500">Sales Management System</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/erp/finance" className="hover:text-blue-600 transition-colors duration-200">
-              Finance
-              <p className="text-sm text-gray-500">Financial Management Tools</p>
-            </Link>
-          </li>
-        </ul>
       </div>
     </div>
   );
 };
 
-import {  
-   Brain, Database, BarChart, 
-  MessageSquare, Cloud, LineChart, Search, PieChart, Bot, ChartBar, Lightbulb, 
-  AreaChart, Calculator } from 'lucide-react';
-
 export const DataScienceDropdown = ({ isVisible, isMobile }: DropdownProps) => {
   const dropdownClasses = isMobile
-    ? 'px-4 py-4 space-y-6'
-    : 'absolute top-full left-0 w-[600px] bg-white shadow-lg rounded-lg p-6 grid grid-cols-3 gap-8 z-50';
+    ? 'px-4 py-4 space-y-6 max-h-[70vh] overflow-y-auto'
+    : 'absolute top-full left-1/2 w-[800px] bg-white shadow-lg rounded-lg p-6 grid grid-cols-3 gap-8 z-50 transform -translate-x-1/2';
 
   if (!isVisible && !isMobile) return null;
 
   return (
     <div className={dropdownClasses}>
-      <div className="space-y-4">
-        <div className="flex items-center gap-2 mb-3">
-          <Brain className="w-5 h-5 text-blue-600" />
-          <h3 className="font-semibold text-gray-800 text-[18px]">Data Science</h3>
+      {/* Data Science Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">Data Science</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/data/mining" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Database className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Data Mining</span>
+              <p className="text-[14px] text-gray-500">Extract valuable insights from data</p>
+            </div>
+          </Link>
+          <Link href="/data/machine-learning" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Brain className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Machine Learning</span>
+              <p className="text-[14px] text-gray-500">Intelligent automated solutions</p>
+            </div>
+          </Link>
+          <Link href="/data/big-data" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <BarChart3 className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Big Data</span>
+              <p className="text-[14px] text-gray-500">Large-scale data processing</p>
+            </div>
+          </Link>
+          <Link href="/data/analysis" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <LineChart className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Data Analysis</span>
+              <p className="text-[14px] text-gray-500">Comprehensive data examination</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/data/mining" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Database className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Data Mining</span>
-                <p className="text-[14px] text-gray-500">Extract valuable insights from data</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/machine-learning" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Brain className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Machine Learning</span>
-                <p className="text-[14px] text-gray-500">Intelligent automated solutions</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/big-data" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <BarChart className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Big Data</span>
-                <p className="text-[14px] text-gray-500">Large-scale data processing</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/analysis" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <LineChart className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Data Analysis</span>
-                <p className="text-[14px] text-gray-500">Comprehensive data examination</p>
-              </div>
-            </Link>
-          </li>
-        </ul>
       </div>
 
-      <div className="space-y-4">
-        <div className="flex items-center gap-2 mb-3">
-          <BarChart className="w-5 h-5 text-blue-600" />
-          <h3 className="font-semibold text-gray-800 text-[18px]">Advanced Analytics</h3>
+      {/* Advanced Analytics Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">Advanced Analytics</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/data/nlp" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <MessageSquare className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Natural Language Processing</span>
+              <p className="text-[14px] text-gray-500">Text and language analysis</p>
+            </div>
+          </Link>
+          <Link href="/data/cloud" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Cloud className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Cloud Computing</span>
+              <p className="text-[14px] text-gray-500">Scalable cloud solutions</p>
+            </div>
+          </Link>
+          <Link href="/data/visualization" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <PieChart className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Data Visualization</span>
+              <p className="text-[14px] text-gray-500">Interactive data insights</p>
+            </div>
+          </Link>
+          <Link href="/data/exploration" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Search className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Data Exploration</span>
+              <p className="text-[14px] text-gray-500">Discover patterns in data</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/data/nlp" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <MessageSquare className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Natural Language Processing</span>
-                <p className="text-[14px] text-gray-500">Text and language analysis</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/cloud" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Cloud className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Cloud Computing</span>
-                <p className="text-[14px] text-gray-500">Scalable cloud solutions</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/visualization" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <PieChart className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Data Visualization</span>
-                <p className="text-[14px] text-gray-500">Interactive data insights</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/exploration" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Search className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Data Exploration</span>
-                <p className="text-[14px] text-gray-500">Discover patterns in data</p>
-              </div>
-            </Link>
-          </li>
-        </ul>
       </div>
 
-      <div className="space-y-4">
-        <div className="flex items-center gap-2 mb-3">
-          <Bot className="w-5 h-5 text-blue-600" />
-          <h3 className="font-semibold text-gray-800 text-[18px]">Business Solutions</h3>
+      {/* Business Solutions Column */}
+      <div>
+        <h3 className="font-semibold text-gray-800 text-[18px] mb-4">Business Solutions</h3>
+        <div className="flex flex-col gap-3">
+          <Link href="/data/business-analysis" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Briefcase className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Business Analysis</span>
+              <p className="text-[14px] text-gray-500">Strategic business insights</p>
+            </div>
+          </Link>
+          <Link href="/data/business-intelligence" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <ChartBar className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Business Intelligence</span>
+              <p className="text-[14px] text-gray-500">Data-driven decision making</p>
+            </div>
+          </Link>
+          <Link href="/data/power-bi" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <LayoutDashboard className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Power BI Dashboard</span>
+              <p className="text-[14px] text-gray-500">Interactive BI visualizations</p>
+            </div>
+          </Link>
+          <Link href="/data/statistics" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
+            <Calculator className="w-5 h-5 text-blue-600 mt-1" />
+            <div>
+              <span className="text-[16px] font-medium">Statistics</span>
+              <p className="text-[14px] text-gray-500">Statistical analysis and modeling</p>
+            </div>
+          </Link>
         </div>
-        <ul className="space-y-3 pl-7">
-          <li>
-            <Link href="/data/business-analysis" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <ChartBar className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Business Analysis</span>
-                <p className="text-[14px] text-gray-500">Strategic business insights</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/business-intelligence" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Lightbulb className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Business Intelligence</span>
-                <p className="text-[14px] text-gray-500">Data-driven decision making</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/power-bi" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <AreaChart className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Power BI Dashboard</span>
-                <p className="text-[14px] text-gray-500">Interactive BI visualizations</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/data/statistics" className="hover:text-blue-600 transition-colors duration-200 flex items-start gap-2">
-              <Calculator className="w-4 h-4 mt-1 text-blue-600" />
-              <div>
-                <span className="text-[16px]">Statistics</span>
-                <p className="text-[14px] text-gray-500">Statistical analysis and modeling</p>
-              </div>
-            </Link>
-          </li>
-        </ul>
       </div>
     </div>
   );

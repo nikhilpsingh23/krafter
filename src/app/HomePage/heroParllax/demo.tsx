@@ -4,7 +4,7 @@ import { HeroParallax } from "./hero-parallax";
 
 export function HeroParallaxDemo() { 
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative min-h-screen w-[full]">
       <div className="relative w-full space-y-0">
         <HeroParallax products={products} />
       </div>
