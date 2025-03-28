@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import WhatsAppButton from "@/components/Whatsapp/page";
 
-const raleway = Raleway({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-raleway",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} font-raleway antialiased`}>
+      <body className={`${montserrat.variable} font-montserrat antialiased`}>
         <div className="fixed top-0 left-0 right-0 z-[997]">
         <Navbar />
         </div>
@@ -31,6 +31,7 @@ export default function RootLayout({
         <div className="fixed bottom-42 md:bottom-38 right-8 z-[999]">
           <WhatsAppButton />
         </div>
+        
        {/* <div className="fixed bottom-0 left-0 right-0 z-[998]">
           <AppleStyleDock />
         </div> */}

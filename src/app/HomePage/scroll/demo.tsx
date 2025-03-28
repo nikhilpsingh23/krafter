@@ -102,10 +102,11 @@ const content = [
 export function StickyScrollRevealDemo() {
   return (
     <>
+      
+      <div className="p-10">
       <div className="flex items-center justify-center py-4">
         <h2 className="text-4xl font-bold text-center">What We Offer</h2>
       </div>
-      <div className="p-10">
         <StickyScroll content={content} />
       </div>
     </>
