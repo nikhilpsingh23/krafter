@@ -83,7 +83,7 @@ const TrustedBy = () => {
           
           {/* Load more button */}
           <div className="aspect-square relative overflow-hidden w-full">
-            <div className="absolute inset-0 bg-[#e6ffe6]/30 rounded-2xl lg:rounded-3xl">
+            <div className="absolute inset-0 bg-[#d6eaf8]/50 rounded-2xl lg:rounded-3xl">
               <button 
                 onClick={handleLoadMore}
                 className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 lg:bottom-4 lg:right-4 bg-white px-2 py-1 sm:px-3 sm:py-2 flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group rounded-lg"

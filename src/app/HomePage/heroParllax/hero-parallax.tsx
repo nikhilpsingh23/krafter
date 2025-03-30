@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[240vh] md:h-[340vh] py-4 md:py-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
+      className="h-[220vh] md:h-[340vh] py-4 md:py-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
     >
       <Header />
       <motion.div
@@ -111,17 +111,16 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-40">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-40 flex flex-col md:items-start items-center md:pl-20">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-black text-center md:text-left">
         Your Next <br /> WWW Is Here
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-black text-center md:text-left mx-auto md:mx-0">
+      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-black text-center md:text-left">
         Welcome to the future of IT Services
       </p>
     </div>
   );
 };
-
 export const ProductCard = ({
   product,
   translate,
