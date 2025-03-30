@@ -119,7 +119,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[40rem] relative flex rounded-md p-10"
+      className="h-[40rem] relative flex rounded-md p-10 "
       ref={ref}
     >
       {/* Mobile Menu - Centered on left side */}
