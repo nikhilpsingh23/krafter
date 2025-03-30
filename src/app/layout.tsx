@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-montserrat antialiased`}>
+      <body className={`${montserrat.variable} font-montserrat antialiased bg-white`}>
         <div className="fixed top-0 left-0 right-0 z-[997]">
         <Navbar />
         </div>
-        <main className="pb-48 md:pb-40">
+        <main className="pb-48 md:pb-40 bg-white">
           {children}
         </main>
         <div className="fixed bottom-42 md:bottom-38 right-8 z-[999]">

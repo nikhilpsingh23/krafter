@@ -16,7 +16,7 @@ import FooterNav from "@/components/Footer/FooterNav";
 export default function Home() {
   return (
     <>
-      <div className="space-y-40 pb-0 bg-[#f2f3f4]">
+      <div className="space-y-20 pb-0 bg-[#f2f3f4]">
         <HeroParallaxDemo/>
         <SplineSceneBasic/>
         <StickyScrollRevealDemo/>

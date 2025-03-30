@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8 text-[18px]">
             <div className="relative group">
               <button 
-                className="hover:text-blue-600 py-4 flex items-center gap-1"
+                className=" text-gray-800 hover:text-[#823dd9] py-4 flex items-center gap-1"
               >
                 IT Services
                 <ChevronDown className="w-4 h-4" />
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <div className="relative group">
               <button 
-                className="hover:text-blue-600 py-4 flex items-center gap-1"
+                className=" text-gray-800 hover:text-[#823dd9] py-4 flex items-center gap-1"
               >
                 Data Science
                 <ChevronDown className="w-4 h-4" />
@@ -50,16 +50,16 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link href="/digital-marketing" className="hover:text-blue-600">
+            <Link href="/digital-marketing" className=" text-gray-800 hover:text-[#823dd9]">
               Digital Marketing
             </Link>
-            <Link href="/about" className="hover:text-blue-600">
+            <Link href="/about" className=" text-gray-800 hover:text-[#823dd9]">
               About Us
             </Link>
-            <Link href="/careers" className="hover:text-blue-600">
+            <Link href="/careers" className=" text-gray-800 hover:text-[#823dd9]">
               Careers
             </Link>
-            <Link href="/projects" className="hover:text-blue-600">
+            <Link href="/projects" className=" text-gray-800 hover:text-[#823dd9]">
               Projects
             </Link>
           </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 hover:bg-gray-100 rounded-lg"
+              className="p-2  text-gray-800 hover:bg-gray-100 rounded-lg"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -81,7 +81,7 @@ const Navbar = () => {
             <div className="space-y-2">
               <button 
                 onClick={() => toggleDropdown('it')}
-                className="w-full text-left px-3 py-2 hover:bg-gray-100 flex items-center justify-between"
+                className="w-full text-left px-3 py-2  text-gray-800 hover:bg-gray-100 flex items-center justify-between"
               >
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'it' ? 'rotate-180' : ''}`} />
@@ -92,7 +92,7 @@ const Navbar = () => {
             <div className="space-y-2">
               <button 
                 onClick={() => toggleDropdown('data')}
-                className="w-full text-left px-3 py-2 hover:bg-gray-100 flex items-center justify-between"
+                className="w-full text-left px-3 py-2  text-gray-800 hover:bg-gray-100 flex items-center justify-between"
               >
                 <span>Data Science</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'data' ? 'rotate-180' : ''}`} />
@@ -101,22 +101,22 @@ const Navbar = () => {
             </div>
 
             <Link href="/digital-marketing" 
-              className="block px-3 py-2 hover:bg-gray-100"
+              className="block px-3 py-2  text-gray-800 hover:bg-gray-100"
             >
               Digital Marketing
             </Link>
             <Link href="/about" 
-              className="block px-3 py-2 hover:bg-gray-100"
+              className="block px-3 py-2   text-gray-800 hover:bg-gray-100"
             >
               About Us
             </Link>
             <Link href="/careers" 
-              className="block px-3 py-2 hover:bg-gray-100"
+              className="block px-3 py-2  text-gray-800 hover:bg-gray-100"
             >
               Careers
             </Link>
             <Link href="/projects" 
-              className="block px-3 py-2 hover:bg-gray-100"
+              className="block px-3 py-2  text-gray-800 hover:bg-gray-100"
             >
               Projects
             </Link>
