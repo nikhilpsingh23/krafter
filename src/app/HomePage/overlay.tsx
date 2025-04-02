@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Overlay = () => {
     return (
-        <div className="relative mt-30 w-full h-screen overflow-hidden">
+        <div className="relative mt-0 w-full h-screen overflow-hidden">
             <motion.div 
                 className="absolute inset-0"
                 style={{ height: '200%' }}

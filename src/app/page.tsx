@@ -22,14 +22,18 @@ export default function Home() {
     <>
     <HeroParallaxDemo/>
     <SplineSceneBasic/>
-      <div className="space-y-13 pb-0 bg-[#f2f3f4]">
-        
+      <div className="space-y-10 pb-0 bg-[#f2f3f4]">
         <StickyScrollRevealDemo/>
+        </div>
         {/*<LampDemo/> */}
+        
         <HeroDemo/>
         <Overlay/>
+        <div className="space-y-13 pb-0 bg-[#f2f3f4]">
         <BannerGrid/>
         <TrustedBy/>
+        </div>
+       
         
        {/* <DharmaERP/>
         
@@ -42,7 +46,7 @@ export default function Home() {
         <div className="-mb-24">
           <FooterNav/>
         </div>
-      </div>
+      
     </>
   );
 }
