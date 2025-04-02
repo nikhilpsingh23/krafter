@@ -28,7 +28,6 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
     {
       className,
       gradient = true,
-      blur = true,
       title,
       subtitle,
       actions,
@@ -39,8 +38,6 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
     },
     ref,
   ) => {
-    const [isInView, setIsInView] = useState(false)
-    
     return (
       <section
         ref={ref}
@@ -57,8 +54,8 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 1 }}
-            onViewportEnter={() => setIsInView(true)}
-            onViewportLeave={() => setIsInView(false)}
+            // Removed onViewportEnter since setIsInView is not defined and not needed
+            // Remove onViewportLeave since setIsInView is not defined
           >
             {/* Main glow */}
             <motion.div 

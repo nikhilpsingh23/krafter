@@ -6,7 +6,7 @@ interface BannerProps {
   title: string;
   
   accentColor?: string;
-  textColor?: string;
+  
   logoSrc: string;
 }
 
@@ -14,7 +14,7 @@ export default function Product({
   title,
   
   accentColor = "#F5A623",
-  textColor = "#DA552F",
+  
   logoSrc
 }: BannerProps) {
   const [isHovered, setIsHovered] = useState(false)

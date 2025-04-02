@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import { 
-  Smartphone, Apple, Layers, Globe, 
-  Building2, ShoppingCart, Wrench, Layout, 
-  Database, Users, File, BarChart3, Wallet ,LineChart, 
-  MessageSquare, Cloud, PieChart, Search,
-  Briefcase, ChartBar, LayoutDashboard, Calculator,Brain
+  Smartphone,Globe, 
+  Database, LineChart, 
+  ChartBar
 } from 'lucide-react';
 
 

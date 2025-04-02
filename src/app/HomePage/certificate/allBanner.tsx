@@ -16,7 +16,7 @@ export default function BannerGrid() {
             title="ISO 9001" 
               
             accentColor="#545353" 
-            textColor="#545353"
+            
             logoSrc="/images/home/14001.png"
           />
         </div>
@@ -25,7 +25,7 @@ export default function BannerGrid() {
           <Product 
             title="ISO 1401" 
             accentColor="#545353" 
-            textColor="#4B5563"
+            
             logoSrc="/images/home/9001.png"
           />
         </div>
@@ -35,7 +35,7 @@ export default function BannerGrid() {
             title="ISO 4501" 
             
             accentColor="#545353" 
-            textColor="#7C3AED"
+            
             logoSrc="/images/home/27001.png"
           />
         </div>
@@ -45,7 +45,7 @@ export default function BannerGrid() {
             title="ISO 2701" 
             
             accentColor="#545353" 
-            textColor="#059669"
+            
             logoSrc="/images/home/45001.png"
           />
         </div>
