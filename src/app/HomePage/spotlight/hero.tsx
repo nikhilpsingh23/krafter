@@ -42,7 +42,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
       <section
         ref={ref}
         className={twMerge(clsx(
-          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden rounded-md bg-background",
+          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden rounded-md bg-black dark:bg-black",
           className,
         ))}
         {...props}
@@ -76,7 +76,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             />
 
             {/* Top line */}
-            <motion.div
+            <motion.div 
               initial={{ width: "15rem", opacity: 0 }}
               whileInView={{ width: "30rem", opacity: 1 }}
               viewport={{ once: false }}
@@ -132,7 +132,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
           <div className="flex flex-col items-center text-center space-y-4">
             <h3
               className={twMerge(clsx(
-                "text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-20  tracking-tight",
+                "text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-20 tracking-tight text-white dark:text-white",
                 titleClassName,
             ))}
             >
@@ -141,7 +141,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             {subtitle && (
               <p
                 className={twMerge(clsx(
-                  "text-xl text-muted-foreground",
+                  "text-xl text-gray-300 dark:text-gray-300",
                   subtitleClassName,
                 ))}
               >
