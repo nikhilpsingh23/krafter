@@ -37,7 +37,7 @@ const content = [
     description: "Comprehensive cybersecurity and protection systems",
     content: (
       <div className="h-full w-full flex items-center justify-center">
-        <Image src="/images/products/security.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Security Suite" />
+        <Image src="/images/home/social.jpg" width={400} height={400} className="h-full w-full object-cover rounded-lg" alt="Security Suite" />
       </div>
     ),
   },
@@ -105,7 +105,7 @@ export function StickyScrollRevealDemo() {
       
       <div className="p-10">
       <div className="flex items-center justify-center py-4">
-        <h2 className="text-4xl dark:text-black font-bold text-center">What We Offer</h2>
+        <h2 className="text-3xl dark:text-black font-bold text-center">What We Offer</h2>
       </div>
         <StickyScroll content={content} />
       </div>

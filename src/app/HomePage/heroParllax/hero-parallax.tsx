@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[220vh] md:h-[340vh] py-4 md:py-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
+      className="h-[240vh] md:h-[340vh] py-4 md:py-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gradient-to-r from-[#e7e5e8]40 to-[#464444]/50"
     >
       <Header />
       <motion.div
@@ -71,38 +71,47 @@ export const HeroParallax = ({
         className="px-2 md:px-4"
       >
         <motion.div className="flex flex-col gap-10 md:gap-20">
+          {/* First Row */}
+          <div>
+            <h3 className="text-2xl font-bold text-black mb-2">Cloud Service</h3>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-10 overflow-visible">
+              {firstRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                />
+              ))}
+            </motion.div>
+          </div>
           
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-20 overflow-visible">
-            {firstRow.map((product) => (
-              <ProductCard
-                product={product}
-                translate={translateX}
-                key={product.title}
-              />
-            ))}
-          </motion.div>
+          {/* Second Row */}
+          <div>
+            <h3 className="text-2xl font-bold text-black mb-2">SAAS Service</h3>
+            <motion.div className="flex flex-row space-x-10 md:space-x-20 mb-10 md:mb-10 overflow-visible">
+              {secondRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                />
+              ))}
+            </motion.div>
+          </div>
           
-         
-          <motion.div className="flex flex-row space-x-10 md:space-x-20 mb-10 md:mb-20 overflow-visible">
-            {secondRow.map((product) => (
-              <ProductCard
-                product={product}
-                translate={translateXReverse}
-                key={product.title}
-              />
-            ))}
-          </motion.div>
-          
-          
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 overflow-visible">
-            {thirdRow.map((product) => (
-              <ProductCard
-                product={product}
-                translate={translateX}
-                key={product.title}
-              />
-            ))}
-          </motion.div>
+          {/* Third Row */}
+          <div>
+            <h3 className="text-2xl font-bold text-black mb-2">MSME</h3>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 overflow-visible">
+              {thirdRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                />
+              ))}
+            </motion.div>
+          </div>
         </motion.div>
       </motion.div>
     </div>

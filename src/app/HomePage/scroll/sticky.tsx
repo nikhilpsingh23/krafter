@@ -192,44 +192,44 @@ export const StickyScroll = ({
   
       {/* Desktop Menu */}
       <div className="hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 flex-col gap-6 z-10">
-  <div
-    className={`relative px-6 py-2 cursor-pointer transition-all ${
-      activeSection === 'products' 
-        ? 'text-white' 
-        : 'text-white/50 hover:text-white/70'
-    }`}
-    onClick={() => handleMenuClick('products')}
-  >
-    {activeSection === 'products' && (
-      <motion.div
-        layoutId="active-indicator"
-        className="absolute left-0 top-0 w-[3px] h-full bg-blue-500"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      />
-    )}
-    Product
-  </div>
-  <div
-    className={`relative px-6 py-2 cursor-pointer transition-all ${
-      activeSection === 'services' 
-        ? 'text-white' 
-        : 'text-white/50 hover:text-white/70'
-    }`}
-    onClick={() => handleMenuClick('services')}
-  >
-    {activeSection === 'services' && (
-      <motion.div
-        layoutId="active-indicator"
-        className="absolute left-0 top-0 w-[3px] h-full bg-blue-500"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      />
-    )}
-    Services
-  </div>
+      <div
+          className={`relative px-6 py-2 cursor-pointer transition-all text-3xl font-semibold tracking-wide ${
+            activeSection === 'products' 
+              ? 'text-white' 
+              : 'text-white/50 hover:text-white/70'
+          }`}
+          onClick={() => handleMenuClick('products')}
+        >
+          {activeSection === 'products' && (
+            <motion.div
+              layoutId="active-indicator"
+              className="absolute left-0 top-0 w-[3px] h-full bg-blue-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+          )}
+          Product
+        </div>
+        <div
+          className={`relative px-6 py-2 cursor-pointer transition-all text-3xl font-semibold tracking-wide ${
+            activeSection === 'services' 
+              ? 'text-white' 
+              : 'text-white/50 hover:text-white/70'
+          }`}
+          onClick={() => handleMenuClick('services')}
+        >
+          {activeSection === 'services' && (
+            <motion.div
+              layoutId="active-indicator"
+              className="absolute left-0 top-0 w-[3px] h-full bg-blue-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+          )}
+          Services
+        </div>
 </div>
 
       {/* Content */}

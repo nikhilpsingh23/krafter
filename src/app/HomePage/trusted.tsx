@@ -35,28 +35,28 @@ const TrustedBy = () => {
   };
 
   const LogoCell = ({ index }: { index: number }) => (
-    <div className="aspect-square flex items-center justify-center p-3 sm:p-4 lg:p-6 bg-[#bab8ba]/30 rounded-2xl lg:rounded-3xl transition-all duration-300 hover:bg-white w-full">
+    <div className="aspect-square flex items-center justify-center p-3 sm:p-4 lg:p-6 bg-[#bab8ba]/30 rounded-2xl lg:rounded-3xl transition-all duration-300 hover:bg-white w-full h-full sm:h-[60%]">
       <Image 
         src={logoSets[currentSet as keyof typeof logoSets][index]} 
         alt="Company Logo" 
         width={100} 
-        height={35} 
+        height={70} 
         className="w-12 sm:w-16 lg:w-[100px] opacity-70 transition-all duration-300 hover:opacity-100 filter grayscale hover:grayscale-0" 
       />
     </div>
   );
 
   const EmptyCell = () => (
-    <div className="aspect-square flex items-center justify-center p-3 sm:p-4 lg:p-6 bg-[#d6eaf8]/50 rounded-2xl lg:rounded-3xl w-full">
+    <div className="aspect-square flex items-center justify-center p-3 sm:p-4 lg:p-6 bg-[#d6eaf8]/50 rounded-2xl lg:rounded-3xl w-full h-full sm:h-[60%]">
     </div>
   );
 
   return (
-    <section className="w-full py-4 sm:py-6 lg:py-8 bg-[#e5e7e9] rounded-2xl lg:rounded-3xl min-h-[300px] sm:min-h-[400px] lg:h-[700px] shadow-[rgba(0,_0,_0,_0.2)_0px_12px_28px_0px,_rgba(0,_0,_0,_0.1)_0px_2px_4px_0px,_rgba(255,_255,_255,_0.05)_0px_0px_0px_1px_inset]">
+    <section className="w-full py-4 sm:py-6 lg:py-8 bg-[#e5e7e9] rounded-2xl lg:rounded-3xl min-h-[300px] sm:min-h-[400px] lg:h-[600px] shadow-[rgba(0,_0,_0,_0.2)_0px_12px_28px_0px,_rgba(0,_0,_0,_0.1)_0px_2px_4px_0px,_rgba(255,_255,_255,_0.05)_0px_0px_0px_1px_inset]">
       <div className="mx-auto px-3 sm:px-4 h-full bg-[#ededed] rounded-xl pt-2" style={{ maxWidth: '1250px' }}>
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4 lg:gap-6 h-full mt-3 sm:mt-4 lg:mt-6 max-w-full sm:max-w-none mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-1 sm:gap-2 lg:gap-x-3 lg:gap-y-0 h-full mt-2 sm:mt-3 lg:mt-4 max-w-full sm:max-w-none mx-auto">
           {/* Title */}
-          <div className="col-span-2 sm:col-span-3 lg:col-span-2 flex items-start p-3 sm:p-4 lg:p-6 bg-[#d6eaf8]/50 border-2 border-[#2d3436]/20 rounded-2xl lg:rounded-3xl">
+          <div className="col-span-2 h-full sm:h-[60%] sm:col-span-3 lg:col-span-2 flex items-start p-3 sm:p-4 lg:p-6 bg-[#d6eaf8]/50 border-2 border-[#2d3436]/20 rounded-2xl lg:rounded-3xl">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-[#2d3436]">
               Who trusts us?
             </h2>
@@ -82,7 +82,7 @@ const TrustedBy = () => {
           <LogoCell index={1} />
           
           {/* Load more button */}
-          <div className="aspect-square relative overflow-hidden w-full">
+          <div className="aspect-square relative overflow-hidden w-full h-full sm:h-[60%]">
             <div className="absolute inset-0 bg-[#d6eaf8]/50 rounded-2xl lg:rounded-3xl">
               <button 
                 onClick={handleLoadMore}
