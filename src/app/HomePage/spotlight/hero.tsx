@@ -42,9 +42,15 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
       <section
         ref={ref}
         className={twMerge(clsx(
-          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden rounded-md bg-black dark:bg-black",
+          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden rounded-md",
+          "bg-[#0a0a0a] dark:bg-[#0a0a0a]",
+          "before:absolute before:inset-0 before:bg-[#0a0a0a] before:z-[-1]",
           className,
         ))}
+        style={{
+          backgroundColor: '#0a0a0a',
+          color: '#ffffff',
+        }}
         {...props}
       >
         {gradient && (

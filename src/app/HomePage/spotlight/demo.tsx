@@ -4,7 +4,7 @@ function HeroDemo() {
   return (
     <Hero
       title="We provide bench
-resources on contract
+resources on contract 
 and project basis."
       subtitle="Transform your workflow with intelligent automation. Simple, powerful, reliable."
       actions={[
