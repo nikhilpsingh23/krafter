@@ -42,30 +42,22 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
       <section
         ref={ref}
         className={twMerge(clsx(
-          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden rounded-md",
-          "bg-[#0a0a0a] dark:bg-[#0a0a0a]",
-          "before:absolute before:inset-0 before:bg-[#0a0a0a] before:z-[-1]",
+          "relative z-0 flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden bg-black",
           className,
         ))}
-        style={{
-          backgroundColor: '#0a0a0a',
-          color: '#ffffff',
-        }}
         {...props}
       >
         {gradient && (
           <motion.div 
-            className="absolute top-0 isolate z-0 flex w-screen flex-1 items-start justify-center"
+            className="absolute top-0 isolate z-0 flex w-screen flex-1 items-start justify-center bg-black"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 1 }}
-            // Removed onViewportEnter since setIsInView is not defined and not needed
-            // Remove onViewportLeave since setIsInView is not defined
           >
             {/* Main glow */}
             <motion.div 
-              className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-[10%] rounded-full bg-white opacity-90 blur-3xl"
+              className="absolute inset-auto z-50 h-24 md:h-36 w-[16rem] md:w-[28rem] -translate-y-[10%] rounded-full bg-white opacity-90 blur-3xl"
               initial={{ scale: 0.5, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 0.9 }}
               viewport={{ once: false }}
@@ -74,17 +66,17 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
 
             {/* Lamp effect */}
             <motion.div
-              initial={{ width: "8rem", opacity: 0 }}
-              whileInView={{ width: "16rem", opacity: 1 }}
+              initial={{ width: "6rem", opacity: 0 }}
+              whileInView={{ width: "12rem", opacity: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 1.5, delay: 0.3 }}
-              className="absolute top-0 z-30 h-36 translate-y-[10%] rounded-full bg-white blur-2xl"
+              className="absolute top-0 z-30 h-24 md:h-36 translate-y-[10%] rounded-full bg-white blur-2xl"
             />
 
             {/* Top line */}
             <motion.div 
-              initial={{ width: "15rem", opacity: 0 }}
-              whileInView={{ width: "30rem", opacity: 1 }}
+              initial={{ width: "10rem", opacity: 0 }}
+              whileInView={{ width: "20rem", opacity: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 1.8, delay: 0.5 }}
               className="absolute inset-auto z-50 h-1 -translate-y-[-10%] bg-white"
