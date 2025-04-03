@@ -17,36 +17,36 @@ export default function BannerGrid() {
               
             accentColor="#545353" 
             
-            logoSrc="/images/home/14001.png"
-          />
-        </div>
-        
-        <div className="h-full">
-          <Product 
-            title="ISO 1401" 
-            accentColor="#545353" 
-            
             logoSrc="/images/home/9001.png"
           />
         </div>
         
         <div className="h-full">
+          <Product 
+            title="ISO 14001" 
+            accentColor="#545353" 
+            
+            logoSrc="/images/home/14001.png"
+          />
+        </div>
+        
+        <div className="h-full">
           <Product
-            title="ISO 4501" 
+            title="ISO 45001" 
             
             accentColor="#545353" 
             
-            logoSrc="/images/home/27001.png"
+            logoSrc="/images/home/45001.png"
           />
         </div>
 
         <div className="h-full">
           <Product 
-            title="ISO 2701" 
+            title="ISO 27001" 
             
             accentColor="#545353" 
             
-            logoSrc="/images/home/45001.png"
+            logoSrc="/images/home/27001.png"
           />
         </div>
         </div>

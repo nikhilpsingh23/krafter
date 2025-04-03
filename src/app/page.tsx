@@ -32,7 +32,7 @@ export default function Home() {
         <div className="space-y-13 pb-0 bg-[#f2f3f4]">
         <BannerGrid/>
         <TrustedBy/>
-        </div>
+        
        
         
        {/* <DharmaERP/>
@@ -46,7 +46,7 @@ export default function Home() {
         <div className="-mb-24">
           <FooterNav/>
         </div>
-      
+        </div>
     </>
   );
 }
