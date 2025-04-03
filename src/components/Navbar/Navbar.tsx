@@ -18,9 +18,22 @@ const Navbar = () => {
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Now on the left for all views */}
-          <div className="flex items-center">
-            <Link href="/">
-              <Image src="/images/logo3.png" alt="Logo" width={160} height={55} />
+          <div className="flex items-center relative">
+            <Link href="/" className="group relative flex items-center">
+              <Image 
+                src="/images/logo3-infinity.png" 
+                alt="Logo" 
+                width={90} 
+                height={45} 
+                className="transition-transform duration-300 group-hover:translate-x-[-10px]"
+              />
+              <Image 
+                src="/images/logo3-code.png" 
+                alt="Secondary Logo" 
+                width={94} 
+                height={47} 
+                className="absolute left-full opacity-0 transition-all duration-300 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-[-5px]"
+              />
             </Link>
           </div>
 

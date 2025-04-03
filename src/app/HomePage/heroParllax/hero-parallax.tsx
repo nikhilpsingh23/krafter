@@ -73,7 +73,7 @@ export const HeroParallax = ({
         <motion.div className="flex flex-col gap-10 md:gap-20">
           {/* First Row */}
           <div>
-            <h3 className="text-2xl font-bold text-black mb-2">Cloud Service</h3>
+            <h3 className="text-2xl font-bold text-black mb-2">Web and App Development</h3>
             <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-10 overflow-visible">
               {firstRow.map((product) => (
                 <ProductCard
@@ -87,7 +87,7 @@ export const HeroParallax = ({
           
           {/* Second Row */}
           <div>
-            <h3 className="text-2xl font-bold text-black mb-2">SAAS Service</h3>
+            <h3 className="text-2xl font-bold text-black mb-2">AI ML Development</h3>
             <motion.div className="flex flex-row space-x-10 md:space-x-20 mb-10 md:mb-10 overflow-visible">
               {secondRow.map((product) => (
                 <ProductCard
@@ -101,7 +101,7 @@ export const HeroParallax = ({
           
           {/* Third Row */}
           <div>
-            <h3 className="text-2xl font-bold text-black mb-2">MSME</h3>
+            <h3 className="text-2xl font-bold text-black mb-2">Erp and Software Development</h3>
             <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 overflow-visible">
               {thirdRow.map((product) => (
                 <ProductCard

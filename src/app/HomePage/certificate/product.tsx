@@ -99,7 +99,7 @@ export default function Product({
           <img 
             src={logoSrc} 
             alt={title} 
-            className="w-16 h-16 object-contain"
+            className="w-10 h-10 object-contain"
           />
         </div>
         

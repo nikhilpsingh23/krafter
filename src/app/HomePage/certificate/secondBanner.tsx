@@ -36,7 +36,7 @@ export default function LogoBanner({
   return (
     <div 
       ref={bannerRef}
-      className={`relative rounded-lg overflow-hidden p-4 m-2 transition-all duration-300 ease-out h-[88px] flex items-center justify-center ${
+      className={`relative rounded-lg overflow-hidden p-2 m-2 transition-all duration-300 ease-out h-[88px] flex items-center justify-center ${
         isHovered ? "shadow-2xl scale-105" : "shadow-lg"
       }`}
       style={{

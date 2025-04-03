@@ -4,9 +4,9 @@ export default function BannerGrid() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* title Row - Logo and Title */}
-      <div className="flex items-center justify-center gap-4 mb-12">
+      <div className="flex items-center justify-left gap-4 mb-8">
         
-        <h1 className="text-3xl font-bold text-black">Certificate and Partner</h1>
+        <h1 className="text-3xl font-bold text-black">Certificates</h1>
       </div>
       
       {/* first Row - Award Banners */}
@@ -51,6 +51,10 @@ export default function BannerGrid() {
         </div>
         </div>
 {/* first Row - Award Banners */}
+<div className="flex items-center justify-left gap-4 mb-8">
+        
+        <h1 className="text-3xl font-bold text-black">Partners</h1>
+      </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-5">
         <div className="h-full">
           <LogoBanner 
@@ -64,7 +68,7 @@ export default function BannerGrid() {
             accentColor="#EF4444" 
           />
         </div>
-        <div className="h-full">
+        {/*<div className="h-full">
           <LogoBanner 
             logoSrc="/images/home/fiver.png"
             accentColor="#EF4444" 
@@ -75,7 +79,7 @@ export default function BannerGrid() {
             logoSrc="/images/home/upwork.png"
             accentColor="#EF4444" 
           />
-        </div>
+        </div> */}
         </div>
       
     </div>

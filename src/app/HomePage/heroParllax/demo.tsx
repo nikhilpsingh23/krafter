@@ -16,7 +16,7 @@ export const products = [
     title: "Moonbeam",
     link: "https://gomoonbeam.com", 
     thumbnail:
-      "/images/home/bg1.png",
+      "/images/home/canva.png",
   },
   {
     title: "Cursor",
