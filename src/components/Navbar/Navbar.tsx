@@ -24,7 +24,7 @@ const Navbar = () => {
                 src="/images/logo3-infinity.png" 
                 alt="Logo" 
                 width={90} 
-                height={45} 
+                height={41} 
                 className="transition-transform duration-300 group-hover:translate-x-[-10px]"
               />
               <Image 
