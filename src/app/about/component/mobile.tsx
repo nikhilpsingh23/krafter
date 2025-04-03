@@ -14,7 +14,19 @@ const carouselItems = [
 
 export default function InfiniteCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,12 +38,29 @@ export default function InfiniteCarousel() {
   const normalizedIndex = currentIndex % carouselItems.length;
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-screen bg-gray-300 overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full min-h-screen bg-gray-300 overflow-hidden">
       <div className="relative flex items-center justify-center w-full overflow-hidden">
+        {/* Phone frame overlay */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      w-[300px] sm:w-[320px] md:w-[340px] lg:w-[360px] 
+                      h-[420px] sm:h-[470px] md:h-[520px] lg:h-[570px] 
+                      border-[12px] border-black rounded-[40px] z-20">
+          {/* Notch */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 
+                        w-24 sm:w-32 h-4 sm:h-6 bg-black rounded-b-2xl"></div>
+          
+          {/* Camera dot */}
+          <div className="absolute top-2 right-1/4 w-2 h-2 rounded-full bg-black"></div>
+          
+          {/* Speaker */}
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 
+                        w-16 sm:w-20 h-1 bg-black rounded-full"></div>
+        </div>
+
         <motion.div
           ref={carouselRef}
           className="flex items-center"
-          animate={{ x: `-${(normalizedIndex * 100) / 3}%` }}
+          animate={{ x: `-${(normalizedIndex * 100) / (isMobile ? 1 : 3)}%` }}
           transition={{ 
             ease: 'linear', 
             duration: 1,
@@ -39,8 +68,14 @@ export default function InfiniteCarousel() {
           }}
         >
           {[...carouselItems, ...carouselItems].map((src, index) => (
-            <div key={index} className="w-1/3 h-[550px] flex-shrink-0 flex items-center justify-center">
-              <img src={src} alt={`Slide ${index}`} className="w-72 h-[550px] object-cover rounded-xl shadow-lg" />
+            <div key={index} className="w-full md:w-1/3 h-auto flex-shrink-0 flex items-center justify-center p-4">
+              <img 
+                src={src} 
+                alt={`Slide ${index}`} 
+                className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] 
+                         h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] 
+                         object-cover rounded-xl shadow-lg" 
+              />
             </div>
           ))}
         </motion.div>

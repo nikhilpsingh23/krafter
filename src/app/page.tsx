@@ -10,6 +10,7 @@ import FooterNav from "@/components/Footer/FooterNav";
 
 import BannerGrid from "./HomePage/certificate/allBanner";
 import { HeroDemo } from "./HomePage/spotlight/demo";
+import InfiniteCarousel from "./about/component/mobile";
 
 
 
@@ -29,7 +30,8 @@ export default function Home() {
         
         <HeroDemo/>
         <Overlay/>
-        <div className="space-y-13 pb-0 bg-[#f2f3f4]">
+        <div className="space-y-13 pb-0 bg-[#f2f3f4] mt-20">
+          <InfiniteCarousel/>
         <BannerGrid/>
         <TrustedBy/>
         

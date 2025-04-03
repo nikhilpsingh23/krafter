@@ -3,6 +3,8 @@ import { TabsDemo } from "./productTab/demo";
 
 import BannerGrid from "./component/banner-grid";
 import InfiniteCarousel from "./component/mobile";
+import MobileCaraousel from "./carausel";
+
 
 
 
@@ -17,6 +19,7 @@ const AboutPage = () => {
     
     <BannerGrid/>
     <InfiniteCarousel/>
+    <MobileCaraousel/>
     </div>
     
     </>
