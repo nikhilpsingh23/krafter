@@ -46,7 +46,7 @@ interface DisclosureCardProps {
   description: string;
 }
 
-function DisclosureCard({ image, title, description }: DisclosureCardProps) {
+function DisclosureCard({  }: DisclosureCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const imageVariants = {

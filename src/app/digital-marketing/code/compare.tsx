@@ -35,66 +35,20 @@ export const Compare = ({
   autoplayDuration = 5000,
 }: CompareProps) => {
   const [sliderXPercent, setSliderXPercent] = useState(initialSliderPercentage);
+  // Remove unused state
   const [isDragging, setIsDragging] = useState(false);
-
   const sliderRef = useRef<HTMLDivElement>(null);
-
-  const [isMouseOver, setIsMouseOver] = useState(false);
-
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
-
-  const startAutoplay = useCallback(() => {
-    if (!autoplay) return;
-
-    const startTime = Date.now();
-    const animate = () => {
-      const elapsedTime = Date.now() - startTime;
-      const progress =
-        (elapsedTime % (autoplayDuration * 2)) / autoplayDuration;
-      const percentage = progress <= 1 ? progress * 100 : (2 - progress) * 100;
-
-      setSliderXPercent(percentage);
-      autoplayRef.current = setTimeout(animate, 16); // ~60fps
-    };
-
-    animate();
-  }, [autoplay, autoplayDuration]);
-
-  const stopAutoplay = useCallback(() => {
-    if (autoplayRef.current) {
-      clearTimeout(autoplayRef.current);
-      autoplayRef.current = null;
-    }
-  }, []);
-
-  useEffect(() => {
-    startAutoplay();
-    return () => stopAutoplay();
-  }, [startAutoplay, stopAutoplay]);
-
-  function mouseEnterHandler() {
-    setIsMouseOver(true);
-    stopAutoplay();
-  }
-
-  function mouseLeaveHandler() {
-    setIsMouseOver(false);
-    if (slideMode === "hover") {
-      setSliderXPercent(initialSliderPercentage);
-    }
-    if (slideMode === "drag") {
-      setIsDragging(false);
-    }
-    startAutoplay();
-  }
-
+  
+  // Update handleStart to use the event parameter
   const handleStart = useCallback(
     (clientX: number) => {
       if (slideMode === "drag") {
         setIsDragging(true);
+        handleMove(clientX); // Use clientX here
       }
     },
-    [slideMode]
+[slideMode]
   );
 
   const handleEnd = useCallback(() => {
@@ -161,8 +115,8 @@ export const Compare = ({
         cursor: slideMode === "drag" ? "grab" : "col-resize",
       }}
       onMouseMove={handleMouseMove}
-      onMouseLeave={mouseLeaveHandler}
-      onMouseEnter={mouseEnterHandler}
+      onMouseLeave={handleEnd}
+      onMouseEnter={(e) => handleMove(e.clientX)}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onTouchStart={handleTouchStart}

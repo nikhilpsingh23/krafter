@@ -107,6 +107,15 @@ export function Disclosure({
   );
 }
 
+interface ChildProps {
+  className?: string;
+  onClick?: () => void;
+  role?: string;
+  'aria-expanded'?: boolean;
+  tabIndex?: number;
+  onKeyDown?: (e: React.KeyboardEvent) => void;
+}
+
 export function DisclosureTrigger({
   children,
   className,
@@ -120,12 +129,12 @@ export function DisclosureTrigger({
     <>
       {React.Children.map(children, (child) => {
         return React.isValidElement(child)
-          ? React.cloneElement(child, {
+          ? React.cloneElement(child as React.ReactElement<ChildProps>, {
               onClick: toggle,
               role: 'button',
               'aria-expanded': open,
               tabIndex: 0,
-              onKeyDown: (e: { key: string; preventDefault: () => void }) => {
+              onKeyDown: (e: React.KeyboardEvent) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
                   toggle();
@@ -133,9 +142,9 @@ export function DisclosureTrigger({
               },
               className: cn(
                 className,
-(child as React.ReactElement<{ className?: string }>).props.className
+                (child as React.ReactElement<ChildProps>).props.className
               ),
-              ...(child as React.ReactElement<any>).props,
+              ...(child.props as object),
             })
           : child;
       })}
