@@ -30,8 +30,9 @@ export default function Home() {
         
         <HeroDemo/>
         <Overlay/>
+        <InfiniteCarousel/>
         <div className="space-y-13 pb-0 bg-[#f2f3f4] mt-20">
-          <InfiniteCarousel/>
+        
         <BannerGrid/>
         <TrustedBy/>
         

@@ -5,11 +5,18 @@ import { motion } from 'framer-motion';
 
 const carouselItems = [
   '/images/home/frame1.png',
-  '/images/home/frame2.png',
+  '/images/home/mobile1.png',
   '/images/home/frame3.png',
   '/images/home/frame4.png',
   '/images/home/frame5.png',
   '/images/home/frame6.png',
+  '/images/home/frame1.png',
+  '/images/home/mobile1.png',
+  '/images/home/frame3.png',
+  '/images/home/frame4.png',
+  '/images/home/frame5.png',
+  '/images/home/frame6.png',
+  
 ];
 
 export default function InfiniteCarousel() {
@@ -38,12 +45,22 @@ export default function InfiniteCarousel() {
   const normalizedIndex = currentIndex % carouselItems.length;
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full min-h-screen bg-gray-300 overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full min-h-screen bg-[#e1e2e3] overflow-hidden">
+      {/* Heading and Description */}
+      <div className="text-center m-6 px-4">
+        <h2 className="text-3xl font-bold mb-4 text-black">
+          Mobile Application
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Your World. Their Fingertips. We are masters in developing Robust & High performant Mobile Applications.
+        </p>
+      </div>
+
       <div className="relative flex items-center justify-center w-full overflow-hidden">
         {/* Phone frame overlay */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                      w-[300px] sm:w-[320px] md:w-[340px] lg:w-[360px] 
-                      h-[420px] sm:h-[470px] md:h-[520px] lg:h-[570px] 
+                      w-[300px] sm:w-[320px] md:w-[340px] lg:w-[310px] 
+                      h-[470px] sm:h-[470px] md:h-[520px] lg:h-[513px] 
                       border-[12px] border-black rounded-[40px] z-20">
           {/* Notch */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 
@@ -72,9 +89,9 @@ export default function InfiniteCarousel() {
               <img 
                 src={src} 
                 alt={`Slide ${index}`} 
-                className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] 
-                         h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] 
-                         object-cover rounded-xl shadow-lg" 
+                className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[292px] 
+                         h-[446px] sm:h-[450px] md:h-[500px] lg:h-[506px] 
+                         object-cover rounded-[30] shadow-lg" 
               />
             </div>
           ))}
