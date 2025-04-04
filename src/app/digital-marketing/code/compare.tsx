@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { SparklesCore } from "./sparkles";
 import { AnimatePresence, motion } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
@@ -32,13 +32,11 @@ export const Compare = ({
   slideMode = "hover",
   showHandlebar = true,
   autoplay = false,
-  autoplayDuration = 5000,
 }: CompareProps) => {
   const [sliderXPercent, setSliderXPercent] = useState(initialSliderPercentage);
   // Remove unused state
   const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   
   // Update handleStart to use the event parameter
   const handleStart = useCallback(
