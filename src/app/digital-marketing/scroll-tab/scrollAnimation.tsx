@@ -55,7 +55,14 @@ export const ContainerScroll = ({
   );
 };
 
-export const Header = ({ translate, titleComponent }: any) => {
+// Add interface for Header props
+interface HeaderProps {
+  translate: MotionValue<number>;
+  titleComponent: string | React.ReactNode;
+}
+
+// Update Header component with proper typing
+export const Header = ({ translate, titleComponent }: HeaderProps) => {
   return (
     <motion.div
       style={{
@@ -102,7 +109,7 @@ interface TabProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Tab: React.FC<TabProps> = ({ isSelected, children, className, onClick }) => {
+export const Tab: React.FC<TabProps> = ({ isSelected, children, className, onClick }) => {
   return (
     <button
       onClick={onClick}
