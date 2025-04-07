@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { clsx} from "clsx";
 
 export const ContainerScroll = ({
   titleComponent,
@@ -91,5 +92,38 @@ export const Card = ({
         {children}
       </div>
     </motion.div>
+  );
+};
+
+interface TabProps {
+  isSelected?: boolean;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Tab: React.FC<TabProps> = ({ isSelected, children, className, onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={clsx(
+        "relative rounded-full px-3 py-1.5 text-sm font-medium outline-sky-400 transition focus-visible:outline-2",
+        {
+          "text-white": isSelected,
+          "text-neutral-400": !isSelected,
+        },
+        className
+      )}
+    >
+      {children}
+      {isSelected && (
+        <motion.div
+          layoutId="pill-tab"
+          className="absolute inset-0 bg-neutral-800"
+          style={{ borderRadius: 9999 }}
+          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+        />
+      )}
+    </button>
   );
 };

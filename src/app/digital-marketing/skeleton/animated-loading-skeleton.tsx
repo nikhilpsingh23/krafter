@@ -35,7 +35,7 @@ const AnimatedLoadingSkeleton = () => {
     const generateSearchPath = (config: GridConfig) => {
         const { numCards, cols, xBase, yBase, xStep, yStep } = config
         const rows = Math.ceil(numCards / cols) // Calculate rows based on cards and columns
-        let allPositions = []
+        const allPositions = []
 
         // Generate grid positions for cards
         for (let row = 0; row < rows; row++) {
