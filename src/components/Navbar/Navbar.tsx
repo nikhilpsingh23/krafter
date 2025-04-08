@@ -15,24 +15,26 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-md">
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="max-w-[1250px] mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - Now on the left for all views */}
+          {/* Logo - Centered and responsive */}
           <div className="flex items-center relative">
             <Link href="/" className="group relative flex items-center">
               <Image 
                 src="/images/logo3-infinity.png" 
                 alt="Logo" 
                 width={90} 
-                height={41} 
-                className="transition-transform duration-300 group-hover:translate-x-[-10px]"
+                height={41}
+                className="w-[70px] md:w-[90px] transition-transform duration-300 group-hover:translate-x-[-10px]"
+                priority
               />
               <Image 
                 src="/images/logo3-code.png" 
                 alt="Secondary Logo" 
                 width={94} 
-                height={47} 
-                className="absolute left-full opacity-0 transition-all duration-300 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-[-5px]"
+                height={47}
+                className="absolute left-full w-[74px] md:w-[94px] opacity-0 transition-all duration-300 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-[-5px]"
+                priority
               />
             </Link>
           </div>

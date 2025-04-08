@@ -11,6 +11,10 @@ import { HeroScrollDemo } from "./scroll-tab/demo";
 import { ScrollVelocityDemo } from "./Scroll-velocity/demo";
 import { HeroHighlightDemo } from "./hero-heighlight.tsx/demo";
 import { SkeletonDemo } from "./skeleton/demo";
+import { AnimatedPinDemo } from "./pin/demo";
+import { Preview } from "./floating/demo";
+import { Gallery4Demo } from "./image-card/demo";
+import { TimelineDemo } from "./timeline/demo";
 
 
 
@@ -31,8 +35,16 @@ const DigitalMarketing = () => {
         <ScrollVelocityDemo/>
         <HeroHighlightDemo/>
         <SkeletonDemo/>
+        <AnimatedPinDemo/>
+        <div className="relative h-screen w-full overflow-hidden">
+          <Preview />
+        </div>
+        <Gallery4Demo/>
+        <div className="relative ">
+          <TimelineDemo/>
+        </div>
     </>
   );
-};
+}; 
 
 export default DigitalMarketing;
