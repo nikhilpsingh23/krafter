@@ -15,6 +15,12 @@ import { AnimatedPinDemo } from "./pin/demo";
 import { Preview } from "./floating/demo";
 import { Gallery4Demo } from "./image-card/demo";
 import { TimelineDemo } from "./timeline/demo";
+import { PodcastCards } from "./s/demo";
+import { DemoHeroGeometric } from "./landing-design/demo";
+import { RevealImageListDemo } from "./reveal-images/demo";
+import InfiniteSliderVertical from "./slider/demo";
+import PortfolioGrid from "./portfolio/demo";
+import Demo from "./app/demo";
 
 
 
@@ -35,14 +41,25 @@ const DigitalMarketing = () => {
         <ScrollVelocityDemo/>
         <HeroHighlightDemo/>
         <SkeletonDemo/>
+        <InfiniteSliderVertical/>
+        <PortfolioGrid/>
+        <Demo/>
         <AnimatedPinDemo/>
         <div className="relative h-screen w-full overflow-hidden">
           <Preview />
         </div>
         <Gallery4Demo/>
+        <DemoHeroGeometric/>
+        <RevealImageListDemo/>
+        <div className="relative h-[200vh] mb-30 mt-0">
+          <PodcastCards/>
+          </div>
         <div className="relative ">
           <TimelineDemo/>
         </div>
+        
+       
+        
     </>
   );
 }; 

@@ -45,7 +45,7 @@ export default function InfiniteCarousel() {
   const normalizedIndex = currentIndex % carouselItems.length;
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full min-h-screen bg-[#e1e2e3] overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full h-[100%] bg-[#e1e2e3] ">
       {/* Heading and Description */}
       <div className="text-center m-6 px-4">
         <h2 className="text-3xl font-bold mb-4 text-black">
@@ -59,12 +59,12 @@ export default function InfiniteCarousel() {
       <div className="relative flex items-center justify-center w-full overflow-hidden">
         {/* Phone frame overlay */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                      w-[300px] sm:w-[320px] md:w-[340px] lg:w-[310px] 
-                      h-[470px] sm:h-[470px] md:h-[520px] lg:h-[513px] 
-                      border-[12px] border-black rounded-[40px] z-20">
+                      w-[300px] sm:w-[320px] md:w-[340px] lg:w-[286px] 
+                      h-[470px] sm:h-[470px] md:h-[520px] lg:h-[535px] 
+                      border-[12px] border-black/50 rounded-[40px] z-20">
           {/* Notch */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 
-                        w-24 sm:w-32 h-4 sm:h-6 bg-black rounded-b-2xl"></div>
+                        w-24 sm:w-32 h-4 sm:h-6 bg-red rounded-b-2xl"></div>
           
           {/* Camera dot */}
           <div className="absolute top-2 right-1/4 w-2 h-2 rounded-full bg-black"></div>
@@ -76,7 +76,7 @@ export default function InfiniteCarousel() {
 
         <motion.div
           ref={carouselRef}
-          className="flex items-center"
+          className="flex items-center z-10"
           animate={{ x: `-${(normalizedIndex * 100) / (isMobile ? 1 : 3)}%` }}
           transition={{ 
             ease: 'linear', 
@@ -89,24 +89,13 @@ export default function InfiniteCarousel() {
               <img 
                 src={src} 
                 alt={`Slide ${index}`} 
-                className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[292px] 
-                         h-[446px] sm:h-[450px] md:h-[500px] lg:h-[506px] 
-                         object-cover rounded-[30] shadow-lg" 
+                className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[267px] 
+                         h-[446px] sm:h-[450px] md:h-[500px] lg:h-[516px] 
+                         object-cover rounded-[30px] shadow-lg relative z-0" 
               />
             </div>
           ))}
         </motion.div>
-      </div>
-
-      <div className="absolute bottom-6 flex mt-5 gap-2">
-        {carouselItems.map((_, index) => (
-          <div
-            key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              normalizedIndex === index ? 'bg-white' : 'bg-gray-500'
-            }`}
-          ></div>
-        ))}
       </div>
     </div>
   );

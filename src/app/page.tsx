@@ -11,6 +11,7 @@ import FooterNav from "@/components/Footer/FooterNav";
 import BannerGrid from "./HomePage/certificate/allBanner";
 import { HeroDemo } from "./HomePage/spotlight/demo";
 import InfiniteCarousel from "./about/component/mobile";
+import PortfolioGrid from "./digital-marketing/portfolio/demo";
 
 
 
@@ -35,7 +36,7 @@ export default function Home() {
         
         <BannerGrid/>
         <TrustedBy/>
-        
+        <PortfolioGrid/>
        
         
        {/* <DharmaERP/>

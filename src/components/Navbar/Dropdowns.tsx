@@ -34,7 +34,7 @@ export const ITServicesDropdown = ({ isVisible, isMobile }: DropdownProps) => {
 
       {/* Website */}
       <div>
-        <Link href="/services/website" className="hover:text-[#823dd9] transition-colors duration-200 flex items-start gap-2">
+        <Link href="/website" className="hover:text-[#823dd9] transition-colors duration-200 flex items-start gap-2">
           <Globe className="w-5 h-5 text-[#ea5e66] mt-1" />
           <div>
             <span className="text-[16px] dark:text-black hover:text-[#823dd9] font-medium">Website Development</span>

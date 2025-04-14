@@ -41,56 +41,82 @@ export function AnimatedBeamDemo() {
   const div7Ref = useRef<HTMLDivElement>(null);
   const div8Ref = useRef<HTMLDivElement>(null);
   const div9Ref = useRef<HTMLDivElement>(null);
-  
+  const div10Ref = useRef<HTMLDivElement>(null);
+  const div11Ref = useRef<HTMLDivElement>(null);
+  const div12Ref = useRef<HTMLDivElement>(null);
+  const div13Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="relative flex h-[650px] w-full items-center justify-center overflow-hidden rounded-lg border bg-white p-15 md:shadow-xl" ref={containerRef}>
-      <div className="relative flex size-[400px] items-center justify-center mt-10">
-      {/* Center Icon */}
-      <Circle ref={div5Ref} className="absolute z-20 size-30">
+    <div className="relative flex h-[800px] w-full items-center justify-center overflow-hidden rounded-lg border bg-white p-15 md:shadow-xl" ref={containerRef}>
+      <div className="relative flex size-[800px] items-center justify-center mt-10">
+        {/* Center Icon */}
+        <Circle ref={div5Ref} className="absolute z-20 size-40 group">
           <Icons.openai />
+          <span className="absolute -bottom-8 text-sm font-medium text-gray-600">AI Assistant</span>
         </Circle>
 
-        {/* Top Row */}
-        <Circle ref={div1Ref} className="absolute -top-4 left-8 size-20 ">
+        {/* Circular Pattern - 12 icons with labels */}
+        <Circle ref={div1Ref} className="absolute transform -translate-y-[300px] size-24 group">
           <Icons.googleDrive />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600 whitespace-nowrap">Cloud Storage</span>
         </Circle>
-        <Circle ref={div2Ref} className="absolute -top-4 size-20">
+        <Circle ref={div2Ref} className="absolute transform -translate-y-[260px] translate-x-[150px] size-24 group">
           <Icons.notion />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Knowledge Base</span>
         </Circle>
-        <Circle ref={div3Ref} className="absolute -top-4 right-8 size-20">
+        <Circle ref={div3Ref} className="absolute transform -translate-y-[150px] translate-x-[260px] size-24 group">
           <Icons.googleDocs />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Documents</span>
         </Circle>
-
-        {/* Middle Row */}
-        <Circle ref={div4Ref} className="absolute size-20 left-0 top-1/2 -translate-y-1/2">
+        <Circle ref={div4Ref} className="absolute transform translate-x-[300px] size-24 group">
           <Icons.whatsapp />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Chat Support</span>
         </Circle>
-        <Circle ref={div6Ref} className="absolute size-20 right-0 top-1/2 -translate-y-1/2">
+        <Circle ref={div6Ref} className="absolute transform translate-y-[150px] translate-x-[260px] size-24 group">
           <Icons.zapier />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Automation</span>
         </Circle>
-
-        {/* Bottom Row */}
-        <Circle ref={div7Ref} className="absolute size-20 -bottom-4 left-8">
+        <Circle ref={div7Ref} className="absolute transform translate-y-[260px] translate-x-[150px] size-24 group">
           <Icons.messenger />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Social Connect</span>
         </Circle>
-        <Circle ref={div8Ref} className="absolute size-20 -bottom-4 ">
+        <Circle ref={div8Ref} className="absolute transform translate-y-[300px] size-24 group">
           <Icons.zapier />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Workflows</span>
         </Circle>
-        <Circle ref={div9Ref} className="absolute size-20 -bottom-4 right-8">
+        <Circle ref={div9Ref} className="absolute transform translate-y-[260px] -translate-x-[150px] size-24 group">
           <Icons.whatsapp />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Team Chat</span>
+        </Circle>
+        <Circle ref={div10Ref} className="absolute transform translate-y-[150px] -translate-x-[260px] size-24 group">
+          <Icons.slack />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Collaboration</span>
+        </Circle>
+        <Circle ref={div11Ref} className="absolute transform -translate-x-[300px] size-24 group">
+          <Icons.discord />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Community</span>
+        </Circle>
+        <Circle ref={div12Ref} className="absolute transform -translate-y-[150px] -translate-x-[260px] size-24 group">
+          <Icons.notion />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Project Docs</span>
+        </Circle>
+        <Circle ref={div13Ref} className="absolute transform -translate-y-[260px] -translate-x-[150px] size-24 group">
+          <Icons.github />
+          <span className="absolute -bottom-6 text-xs font-medium text-gray-600">Code Repo</span>
         </Circle>
       </div>
   
 
       {/* Beam connections */}
-      {[div1Ref, div2Ref, div3Ref, div4Ref, div6Ref, div7Ref, div8Ref, div9Ref].map((ref, index) => (
+      {[div1Ref, div2Ref, div3Ref, div4Ref, div6Ref, div7Ref, div8Ref, div9Ref, 
+        div10Ref, div11Ref, div12Ref, div13Ref].map((ref, index) => (
         <AnimatedBeam
           key={index}
           containerRef={containerRef as RefObject<HTMLElement>}
           fromRef={div5Ref as RefObject<HTMLElement>}
           toRef={ref as RefObject<HTMLElement>}
-          curvature={0}
+          curvature={0.1}
+          className="opacity-60 transition-all duration-400"
         />
       ))}
     </div>
