@@ -83,8 +83,8 @@ const PortfolioGrid = () => {
     </div>
   );
 
-  // Update the renderItems function's card height
-  const renderItems = (items: typeof portfolioItems) => (
+
+  { /* const renderItems = (items: typeof portfolioItems) => (
     <>
       {[...items, ...items, ...items, ...items].map((item, index) => (
         <div 
@@ -99,9 +99,9 @@ const PortfolioGrid = () => {
             <h3 className="text-white text-sm sm:text-base md:text-xl font-semibold"></h3>
           </div>
         </div>
-      ))}
+      ))} 
     </>
-  );
+  );*/}
 };
 
 export default PortfolioGrid;
