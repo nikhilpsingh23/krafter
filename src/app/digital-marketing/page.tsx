@@ -21,7 +21,7 @@ import { RevealImageListDemo } from "./reveal-images/demo";
 import InfiniteSliderVertical from "./slider/demo";
 import PortfolioGrid from "./portfolio/demo";
 import Demo from "./app/demo";
-import { Hero } from "./canva/demo";
+
 import WobbleCardDemo from "./wobble-card/demo";
 
 
@@ -35,9 +35,7 @@ const DigitalMarketing = () => {
         <TabsDemo/>
         <CompareDemo/>
         <HeroDemo1/>
-        <div className="relative h-screen w-full overflow-hidden mb-10">
-        <Hero/>
-        </div>
+        
         <DisclosureCardGrid/>
         <MagnetLinesDemo/>
         <Feature108Demo/>

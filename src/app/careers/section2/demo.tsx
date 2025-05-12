@@ -6,7 +6,7 @@ export default function CareerSection2() {
           {/* Content Column */}
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#5b35b5]">
-              We're just getting started
+              Were just getting started
             </h2>
             <p className="text-[#464647] text-sm sm:text-base">
               Codekrafter is growing fast, and we are always looking for passionate, dynamic, and talented individuals to join our distributed team all around the world.

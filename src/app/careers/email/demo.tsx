@@ -6,7 +6,7 @@ export default function EmailSubscription() {
           Be the first to know about new jobs
         </h2>
         <p className="text-[#464647] text-sm sm:text-base mb-8">
-          We're growing fast and always looking for smart people. Be the first to know.
+          Were growing fast and always looking for smart people. Be the first to know.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

@@ -35,7 +35,7 @@ export default function WobbleCardDemo() {
             No shirt, no shoes, no weapons.
           </h2>
           <p className="text-white/90">
-            If someone yells "stop!", goes limp, or taps out, the fight is over.
+            If someone yells  goes limp, or taps out, the fight is over.
           </p>
         </div>
       </WobbleCard>
