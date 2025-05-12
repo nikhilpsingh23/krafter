@@ -74,8 +74,8 @@ const Navbar = () => {
             <Link href="/careers" className=" text-gray-800 hover:text-[#823dd9]">
               Careers
             </Link>
-            <Link href="/projects" className=" text-gray-800 hover:text-[#823dd9]">
-              Projects
+            <Link href="/PortfolioPage" className=" text-gray-800 hover:text-[#823dd9]">
+            Portfolio
             </Link>
           </div>
 
